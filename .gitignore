@@ -1,0 +1,6 @@
+model
+Testing.csv
+Training.csv
+finalized_model.pickle
+.vscode
+__pycache__
