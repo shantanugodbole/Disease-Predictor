@@ -45,7 +45,21 @@ def predict(s1, s2, s3, s4, s5):
     model = pickle.load(infile)
     predicted = tuple(model.predict([l2]).tolist())
     # print(predicted)
-    return json.dumps(key[predicted[0]])
+
+    output = json.dumps(predicted[0])
+    output = int(output)
+    if output == 12 or output == 34 or output == 35:
+        return "Orthopaedics"
+    elif output == 11 or output == 13 or output == 36:
+        return "Neurologist"
+    elif output == 5 or output == 8 or output == 28 or output == 38:
+        return "General Surgery"
+    elif output == 0 or output == 40 or output == 37 or output == 39:
+        return "Dermat"
+    elif output == 9 or output == 25 or output == 27 or output == 29:
+        return "Pulmonary"
+    else:
+        return "Physician"
     infile.close()
 
 
