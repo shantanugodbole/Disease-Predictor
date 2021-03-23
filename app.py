@@ -12,9 +12,9 @@ key = {0: 'Fungal infection', 1: 'Allergy', 2: 'GERD', 3: 'Chronic cholestasis',
        11: 'Migraine', 12: 'Cervical spondylosis',
        13: 'Paralysis (brain hemorrhage)', 14: 'Jaundice', 15: 'Malaria', 16: 'Chicken pox', 17: 'Dengue', 18: 'Typhoid', 19: 'hepatitis A',
        20: 'Hepatitis B', 21: 'Hepatitis C', 22: 'Hepatitis D', 23: 'Hepatitis E', 24: 'Alcoholic hepatitis', 25: 'Tuberculosis',
-       26: 'Common Cold', 27: 'Pneumonia', 28: 'Dimorphic hemmorhoids(piles)', 29: 'Heart attack', 30: 'Varicose veins', 31: 'Hypothyroidism',
+       26: 'Common Cold', 27: 'Pneumonia', 28: 'Dimorphic hemmorhoids(Piles)', 29: 'Heart attack', 30: 'Varicose veins', 31: 'Hypothyroidism',
        32: 'Hyperthyroidism', 33: 'Hypoglycemia', 34: 'Osteoarthristis', 35: 'Arthritis',
-       36: '(vertigo) Paroymsal  Positional Vertigo', 37: 'Acne', 38: 'Urinary tract infection', 39: 'Psoriasis',
+       36: '(Vertigo) Paroymsal  Positional Vertigo', 37: 'Acne', 38: 'Urinary tract infection', 39: 'Psoriasis',
        40: 'Impetigo'}
 
 
@@ -55,7 +55,7 @@ def predict(s1, s2, s3, s4, s5):
     elif output == 5 or output == 8 or output == 28 or output == 38:
         return "General Surgery"
     elif output == 0 or output == 40 or output == 37 or output == 39:
-        return "Dermat"
+        return "Dermatologist"
     elif output == 9 or output == 25 or output == 27 or output == 29:
         return "Pulmonary"
     else:
