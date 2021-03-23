@@ -57,7 +57,7 @@ def predict(s1, s2, s3, s4, s5):
     elif output == 0 or output == 40 or output == 37 or output == 39:
         return "Dermatologist"
     elif output == 9 or output == 25 or output == 27 or output == 29:
-        return "Pulmonary"
+        return "Pulmonologist"
     else:
         return "Physician"
     infile.close()
