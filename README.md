@@ -1,4 +1,4 @@
-# Disease-Predictor
+# Disease Predictor
 
 ![](https://img.shields.io/badge/-Flask-blue?style=for-the-badge&logo=flask) ![](https://img.shields.io/badge/-Heroku-purple?style=for-the-badge&logo=heroku)
 
@@ -16,3 +16,7 @@ The output will be returned in the form of Doctor Specialization in order to mai
 
 ## Integration 
 The module is integrated with the Flutter app, using a simple ```http.get()``` call. The information is stored into the Firebase Firestore Database for future reference by the concerned doctor.
+
+## Dataset
+
+The dataset used for training can be found [here](https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv)
