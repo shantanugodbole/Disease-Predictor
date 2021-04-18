@@ -31,6 +31,7 @@ def predict(s1, s2, s3, s4, s5):
     symptoms.append(s3)
     symptoms.append(s4)
     symptoms.append(s5)
+    print(symptoms)
     # return s1
     l2 = []
     for x in range(0, len(l1)):

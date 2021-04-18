@@ -8,7 +8,7 @@ import pickle
 l1 = ['itching', 'skin_rash', 'nodal_skin_eruptions', 'continuous_sneezing', 'shivering', 'chills', 'joint_pain',
       'stomach_pain', 'acidity', 'ulcers_on_tongue', 'muscle_wasting', 'vomiting', 'burning_micturition', 'spotting_ urination', 'fatigue',
       'weight_gain', 'anxiety', 'cold_hands_and_feets', 'mood_swings', 'weight_loss', 'restlessness', 'lethargy', 'patches_in_throat',
-      'irregular_sugar_level', 'cough', '   ', 'sunken_eyes', 'breathlessness', 'sweating', 'dehydration', 'indigestion',
+      'irregular_sugar_level', 'cough', 'sunken_eyes', 'breathlessness', 'sweating', 'dehydration', 'indigestion',
       'headache', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'constipation',
       'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
       'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise', 'blurred_and_distorted_vision', 'phlegm', 'throat_irritation',
@@ -75,13 +75,13 @@ def message():
     if (Symptom1.get() == "None" and Symptom2.get() == "None" and Symptom3.get() == "None" and Symptom4.get() == "None" and Symptom5.get() == "None"):
         messagebox.showinfo("OPPS!!", "ENTER  SYMPTOMS PLEASE")
     else:
-        NaiveBayes()
+        DecisionTreeClassifier()
 
 
-def NaiveBayes():
-    from sklearn.naive_bayes import MultinomialNB
-    gnb = MultinomialNB()
-    gnb = gnb.fit(X, np.ravel(y))
+def DecisionTreeClassifier():
+    from sklearn.tree import DecisionTreeClassifier
+    gnb = DecisionTreeClassifier()
+    gnb.fit(X, np.ravel(y))
     filename = 'finalized_model.pickle'
     pickle.dump(gnb, open(filename, 'wb'))
     from sklearn.metrics import accuracy_score
@@ -92,6 +92,7 @@ def NaiveBayes():
     psymptoms = [Symptom1.get(), Symptom2.get(), Symptom3.get(),
                  Symptom4.get(), Symptom5.get()]
 
+    l2 = []
     for k in range(0, len(l1)):
         for z in psymptoms:
             if(z == l1[k]):
