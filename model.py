@@ -79,9 +79,12 @@ def message():
 
 
 def DecisionTreeClassifier():
-    from sklearn.tree import DecisionTreeClassifier
-    gnb = DecisionTreeClassifier()
+    from sklearn.svm import SVC
+    gnb = SVC()
     gnb.fit(X, np.ravel(y))
+    # from sklearn.tree import DecisionTreeClassifier
+    # gnb = DecisionTreeClassifier()
+    # gnb.fit(X, np.ravel(y))
     filename = 'finalized_model.pickle'
     pickle.dump(gnb, open(filename, 'wb'))
     from sklearn.metrics import accuracy_score

@@ -32,6 +32,7 @@ def predict(s1, s2, s3, s4, s5):
     symptoms.append(s4)
     symptoms.append(s5)
     # return s1
+    print(symptoms)
     l2 = []
     for x in range(0, len(l1)):
         l2.append(0)
@@ -45,10 +46,10 @@ def predict(s1, s2, s3, s4, s5):
     model = pickle.load(infile)
     predicted = tuple(model.predict([l2]).tolist())
     # print(predicted)
-    print(predicted)
+    # print(predicted)
     output = json.dumps(predicted[0])
     output = int(output)
-    print(output)
+    # print(output)
     if output == 12 or output == 34 or output == 35:
         return "Orthopedist"
     elif output == 11 or output == 13 or output == 36:
