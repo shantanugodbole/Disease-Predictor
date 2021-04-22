@@ -4,3 +4,4 @@ Training.csv
 finalized_model.pickle
 .vscode
 __pycache__
+model.py

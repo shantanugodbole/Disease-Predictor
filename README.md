@@ -8,7 +8,7 @@ The predictor takes in 5 symptoms to predict the ailment and also classifies the
 
 ## Using Disease Predictor
 
-To use the classifier, pass 5 symptoms as parameters to the hosted application as follows
+To use the classifier, pass 5 symptoms as parameters to the hosted application as follows:
 
  ```https://disease-detector.herokuapp.com/symptom1/symptom2/symptom3/symptom4/symptom5```
 
