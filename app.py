@@ -55,7 +55,7 @@ def predict(s1, s2, s3, s4, s5):
     elif output == 11 or output == 13 or output == 36:
         return "Neurologist"
     elif output == 5 or output == 8 or output == 28 or output == 38:
-        return "General Surgery"
+        return "Surgeon"
     elif output == 0 or output == 40 or output == 37 or output == 39:
         return "Dermatologist"
     elif output == 9 or output == 25 or output == 27 or output == 29:
